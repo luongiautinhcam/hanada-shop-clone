@@ -1,0 +1,4 @@
+
+const privateRoutes = [];
+
+export { privateRoutes};
