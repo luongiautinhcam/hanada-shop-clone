@@ -1,14 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define("Users", {
-        userID: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        password: {
+    const Order = sequelize.define("Orders", {
+        orderID: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -24,10 +16,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        role: {
+        note: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        status: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
     });
-    return User;
+    return Order;
 }

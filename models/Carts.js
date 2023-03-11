@@ -1,33 +1,29 @@
 module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define("Users", {
+    const Cart = sequelize.define("Carts", {
+        cartID: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         userID: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        email: {
+        productID: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        fullname: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        phone: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        address: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        role: {
+        quantity: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        size: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        color: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     });
-    return User;
+    return Cart;
 }
